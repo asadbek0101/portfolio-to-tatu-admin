@@ -19,7 +19,7 @@ export default function ImageTableWrapper({
     const [data, setData] = useState([]);
 
     useEffect(()=>{
-        request.get(`/photo/getAll/${5}`).then((response: any)=>{
+        request.get(`/photo/getAll/${0}`).then((response: any)=>{
             setData(response.data.data)
         }).catch((error: any)=>console.log(error))
     },[request, setData]);

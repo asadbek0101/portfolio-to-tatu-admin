@@ -18,7 +18,7 @@ export default function DGUTableWrapper({
     const [data, setData] = useState([]);
 
     useEffect(()=>{
-        request.get(`/dgu/getAll/${5}`).then((response: any)=>{
+        request.get(`/dgu/getAll/${0}`).then((response: any)=>{
             setData(response.data.data)
         }).catch((error: any)=>console.log(error))
     },[request, setData]);

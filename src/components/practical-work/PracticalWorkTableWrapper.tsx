@@ -18,7 +18,7 @@ export default function PracticalWorkTableWrapper({
     const [data, setData] = useState([]);
 
     useEffect(()=>{
-        request.get(`/practical-work/getAll/${5}`).then((response: any)=>{
+        request.get(`/practical-work/getAll/${0}`).then((response: any)=>{
             setData(response.data.data)
         }).catch((error: any)=>console.log(error))
     },[request, setData]);

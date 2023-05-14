@@ -18,7 +18,7 @@ export default function ExposureTableWrapper({
     const [data, setData] = useState([]);
 
     useEffect(()=>{
-        request.get(`/lecture/getAll/${5}`).then((response: any)=>{
+        request.get(`/lecture/getAll/${0}`).then((response: any)=>{
             setData(response.data.data)
         }).catch((error: any)=>console.log(error))
     },[request, setData]);

@@ -18,7 +18,7 @@ export default function MyInformationTableWrapper({
     const [data, setData] = useState([]);
 
     useEffect(()=>{
-        request.get(`/my-information/getAll/${5}`).then((response: any)=>{
+        request.get(`/my-information/getAll/${0}`).then((response: any)=>{
             setData(response.data.data)
         }).catch((error: any)=>console.log(error))
     },[request, setData]);
