@@ -23,13 +23,13 @@ export default function RootContainer(){
 
     const onSubmit = useCallback((value: any)=>{
                 if(value.email !== "admin@gmail.com" && value.password === "admin2233"){
-                    toast.error("Login not found ")
+                    toast.error("Login not found ");
                 } else if(value.email === "admin@gmail.com" && value.password !== "admin2233"){
-                    toast.error("Password is uncorrect")
+                    toast.error("Password is uncorrect");
                 } else if(value.email === "admin@gmail.com" && value.password === "admin2233"){
-                    navigate('app/exposure')
+                    navigate('app/exposure');
                 }else {
-                    toast.error("User not found")
+                    toast.error("User not found");
                 }
         },[request])
 
