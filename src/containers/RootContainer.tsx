@@ -28,7 +28,6 @@ export default function RootContainer(){
                     toast.error("Password is uncorrect")
                 } else if(value.email === "admin@gmail.com" && value.password === "admin2233"){
                     navigate('app/exposure')
-                    window.location.reload();
                 }else {
                     toast.error("User not found")
                 }
