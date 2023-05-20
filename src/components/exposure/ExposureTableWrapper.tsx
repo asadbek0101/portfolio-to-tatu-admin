@@ -4,6 +4,7 @@ import TabPage from "../tabs/TabPage";
 import ExposureTable from "./ExposureTable";
 import { request } from "../../api/request";
 import { toast } from "react-toastify";
+import { Document, Page } from "react-pdf";
 
 interface Props{
     readonly create: () => void;
@@ -15,7 +16,7 @@ export default function ExposureTableWrapper({
     select
 }:Props){
 
-    const [data, setData] = useState([]);
+    const [data, setData] = useState<any>([]);
 
     useEffect(()=>{
         request.get(`/lecture/getAll/${0}`).then((response: any)=>{
@@ -43,6 +44,7 @@ export default function ExposureTableWrapper({
             }
             childrenClassName="p-3"
             >   
+           
             <ExposureTable
                  data={data}
                  delet={delet}

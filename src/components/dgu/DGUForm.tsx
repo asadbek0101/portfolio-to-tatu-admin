@@ -7,6 +7,7 @@ import Button from "../button/Button";
 import TextAreaField from "../form/TextAreaField";
 import ImgUpload from "../app/ImgUpload";
 import { update } from "immupdate";
+import PDFUpload from "../app/PDFUpload";
 
 interface Props{
     readonly initialValues: any,
@@ -41,6 +42,12 @@ export default function DGUForm({
     const setUploadImg = useCallback((value: any)=>{
         setInitialValues((prev: any) => update(prev, {
             img: value
+        }))
+    },[setInitialValues])
+
+    const setUploadPdf = useCallback((value: any)=>{
+        setInitialValues((prev: any) => update(prev, {
+            link: value
         }))
     },[setInitialValues])
 
@@ -84,6 +91,19 @@ export default function DGUForm({
                                         <img src={initialValues.img} width="50%" alt="" />
                                     </div>
                                 </div>
+                            </GroupBox>
+                        </div>
+                        <div className="col-6">
+                            <GroupBox
+                                title="PDF yuklash"
+                                >
+                                    <div className="row">
+                                        <div className="col-12 mt-4">
+                                            <PDFUpload
+                                                setImage={(value: any)=>setUploadPdf(value)}
+                                                />
+                                        </div>
+                                    </div>
                             </GroupBox>
                         </div>
                         <div className="col-12 mt-3">

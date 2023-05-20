@@ -30,6 +30,9 @@ export default function ExposureTable({
             header: "Actions",
             access: "actions",
             ceil: (row: any)=>{
+                let _String = row.img.includes("image")
+
+                console.log(_String)
                 return (
                             <div className="d-flex gap-2">
                             <TableButton

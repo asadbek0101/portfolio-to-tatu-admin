@@ -4,9 +4,14 @@ import "./assets/upload.scss";
 interface ImgUploadProps{
     readonly setImage: (value: any) => void;
     readonly className?: string;
+    readonly text?: string;
 }
 
-export default function ImgUpload({setImage, className}:ImgUploadProps){
+export default function ImgUpload({
+    setImage, 
+    className,
+    text = "Upload Image"
+}:ImgUploadProps){
 
 
     const convertBase64 = useCallback((e: any) => {
@@ -22,8 +27,8 @@ export default function ImgUpload({setImage, className}:ImgUploadProps){
 
     return (
         <div className={`upload-container ${className}`}>
-            <input id="fileUpload" className="hidden" type="file" hidden onChange={(event: any) => convertBase64(event)} />
-            <label className="upload-label" htmlFor="fileUpload">Upload Image</label>
+            <input id="IMGUpload" className="hidden" type="file" hidden onChange={(event: any) => convertBase64(event)} />
+            <label className="upload-label" htmlFor="IMGUpload">{text}</label>
         </div>
     )
 }
