@@ -22,7 +22,7 @@ export default function ImageFormWrapper({
         content: "",
         description: "",
         img: "",
-        link: "",
+        generateName: "",
     })
     const [search, setSearch] = useSearchParams();
 

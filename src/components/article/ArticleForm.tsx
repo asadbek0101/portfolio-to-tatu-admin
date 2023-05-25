@@ -47,7 +47,7 @@ export default function ArticleForm({
 
     const setUploadPdf = useCallback((value: any)=>{
         setInitialValues((prev: any) => update(prev, {
-            link: value
+            generateName: value
         }))
     },[setInitialValues])
 

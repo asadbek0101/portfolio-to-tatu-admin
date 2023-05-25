@@ -47,7 +47,7 @@ export default function PracticalWorkForm({
 
     const setUploadPdf = useCallback((value: any)=>{
         setInitialValues((prev: any) => update(prev, {
-            link: value
+            generateName: value
         }))
     },[setInitialValues])
   

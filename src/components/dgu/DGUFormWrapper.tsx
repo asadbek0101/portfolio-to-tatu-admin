@@ -21,7 +21,7 @@ export default function DGUFormWrapper({
         content: "",
         description: "",
         img: "",
-        link: "",
+        generateName: "",
     })
     const [search, setSearch] = useSearchParams();
 
