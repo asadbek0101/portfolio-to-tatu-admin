@@ -29,7 +29,7 @@ export default function ImageForm({
 
     const onChangeTitle = useCallback((value: any)=>{
         setInitialValues((prev: any) => update(prev, {
-            name: value.target.value
+            title: value.target.value
         }))
     },[setInitialValues])
 
