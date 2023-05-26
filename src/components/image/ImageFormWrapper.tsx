@@ -18,7 +18,7 @@ export default function ImageFormWrapper({
 }:Props){
 
     const [initialValues, setInitialValues] = useState({
-        title: "",
+        name: "",
         content: "",
         description: "",
         img: "",
