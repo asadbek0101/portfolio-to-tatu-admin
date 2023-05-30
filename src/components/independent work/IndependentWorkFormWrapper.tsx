@@ -22,6 +22,7 @@ export default function IndependentWorkFormWrapper({
         description: "",
         img: "",
         link: "",
+        generateName: "",
     })
     const [search, setSearch] = useSearchParams();
 
